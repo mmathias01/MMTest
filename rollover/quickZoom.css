@@ -28,7 +28,8 @@
 	position:absolute; text-align:left;
 	bottom:0; left:0;
 	background:url('images/title_backg.png') repeat; color:#CCC;
-	padding:5px 0; margin:0;
+	padding:5px 0 0 3px; 
+	margin:0;
 	font:12px/1 'Gill Sans', Helvetica, sans-serif;
 	z-index:15;
 }
