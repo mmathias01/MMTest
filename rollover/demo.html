@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+		<title>QUICKzoom Demo</title>
+		
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.4.4.min.js"></script>
+		<script type="text/javascript" src="jquery.easing.1.3.js"></script>
+		<script type="text/javascript" src="jquery.quickZoom.js"></script>
+		<link href="quickZoom.css" rel="stylesheet" type="text/css" />
+		
+		<script tyle="text/javascript">
+			$(document).ready(function() {
+				$('.quickZoom li').quickZoom({
+					zoom:2,
+					speedIn:500,
+					speedOut: 200,
+					easeIn:'easeOutBack',  
+					titleInSpeed: 200
+				});
+				$('.customClass li').quickZoom({
+					zoom:3,
+					speedIn:500,
+					speedOut: 200,
+					easeIn:'easeOutBack',  
+					titleInSpeed: 200,
+					sqThumb:true
+				});
+			});
+		</script>
+		
+		<style>
+			.customClass {width:340px; margin:0 auto;}
+			.customClass li {
+					list-style:none;
+					margin:0; padding:0;
+					float:left;
+				/*	set the thumbnail spacing*/
+					margin:30px;
+					position:relative;
+			}
+			.customClass li, .customClass li img {
+			/*	set the thumbnail size, you must set li and img to the same dimensions*/
+				width:110px; height:110px; position:relative;
+			}
+			h1 {text-align:center; font-family:helvetica;}
+			div {width:100%; clear:both; padding:20px 0;}
+		</style>
+		
+	</head>
+	<body>
+		<h1>QUICKzoom DEMO</h1>
+		<ul class="quickZoom">
+			<li><img src="images/1.jpg" alt="title" />
+				<span>This is an example title</span></li>
+			<li><img src="images/2.jpg" alt="title" />
+				<span>If you put in a really long caption it will extend within the picture across multiple lines</span></li>
+			<li><img src="images/3.jpg" alt="title" />
+				<span>You can also add a line<br />
+					break if you want multiple lines</span></li>
+			<li><a href="#"><img src="images/4.jpg" alt="title" /></a>
+				<span>You can put the image into a link</span></li>
+			<li><img src="images/5.jpg" alt="title" />
+				<span><a href="#">You can also put the caption in a link</a></span></li>
+			<li><img src="images/6.jpg" alt="title" />
+				<span>Are <strong>you</strong> ready to <em>get going?</em></span></li>
+		</ul>
+		<div>
+		<h1>Set sqThumb: true to preserve the image aspect ratio</h1>
+		<ul class="customClass">
+			<li><img src="images/sq1.jpg" alt="title" /></li>
+			<li><img src="images/sq2.jpg" alt="title" /></li>
+		</ul>
+		</div>
+		<div>
+			<h1>Need some help or have found a bug?</h1>
+			<h1><a href="http://jquery-quickzoom.com">QUICKzoom website</a></h1>
+		</div>
+	</body>
+</html>

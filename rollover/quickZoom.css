@@ -1,0 +1,45 @@
+.quickZoom {
+/*	set the styles for the image list*/
+	height:420px; width:620px; margin:0 auto;
+}
+.quickZoom a, .quickZoom img {
+	outline:none; border:none;
+}
+.quickZoom li {
+	list-style:none;
+	margin:0; padding:0;
+	float:left;
+/*	set the thumbnail spacing*/
+	margin:26px;
+	position:relative;
+}
+.quickZoom li, .quickZoom li img {
+/*	set the thumbnail size, you must set li and img to the same dimensions*/
+	width:150px; height:150px;
+}
+.quickZoom li img {
+	position:absolute;
+/*	if you change the padding, make sure to edit the .js file accordingly*/
+	padding:5px; background:#FFF;
+	z-index:1;
+}
+.quickZoom li span {
+	display:none;
+	position:absolute; text-align:center;
+	bottom:0; left:0;
+	background:url('images/title_backg.png') repeat; color:#CCC;
+	padding:5px 0; margin:0;
+	font:13px/1 'Gill Sans', Helvetica, sans-serif;
+	z-index:15;
+}
+.quickZoom li span a {
+	color:#FFF; display:block; text-decoration:underline;
+}
+.quickZoom li span a:hover {
+	text-decoration:none;
+}
+.quickZoom-hoverShadow {
+	-moz-box-shadow:0 0 10px 0 #000;
+	-webkit-box-shadow:0 0 10px 0 #000;
+	box-shadow:0 0 10px 0 #000;
+}
