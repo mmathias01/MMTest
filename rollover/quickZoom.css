@@ -10,12 +10,12 @@
 	margin:0; padding:0;
 	float:left;
 /*	set the thumbnail spacing*/
-	margin:26px;
+	margin:1px;
 	position:relative;
 }
 .quickZoom li, .quickZoom li img {
 /*	set the thumbnail size, you must set li and img to the same dimensions*/
-	width:150px; height:150px;
+	width:60px; height:60px;
 }
 .quickZoom li img {
 	position:absolute;
